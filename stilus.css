@@ -4,31 +4,32 @@
 	box-sizing: border-box;
 }
 body{
-	background-color: rgb(192, 192, 192);
+	background-image: linear-gradient(rgb(32, 7, 51),rgb(24, 10, 38));
 }
 main{
 	margin: auto;
-	width: 1000px;
+	width: 55%;
 	max-width: 90%;
-	background-image: linear-gradient(rgb(160, 160, 235), rgb(100, 125, 131));
+	background-image: linear-gradient(rgb(20, 45, 23), rgb(5, 54, 24));
 	display: grid;
 	grid-template-areas: 
 	"he he he he he"
 	"ar ar ar ar as"
 	"fo fo fo fo fo"
 	;
+	border: 2px black solid;
+	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 .vetelKartya{
 	width: 95%;
-	border: 2px solid rgb(71, 71, 71);
+	border: 3px solid rgb(99, 98, 98);
 	/*grid-areas: v;*/
 	padding: 5px;
 	margin: 10px;
 	border-radius: 20px;
-	background-color: rgb(156, 153, 153);
-	color: rgb(145, 145, 145);
+	background-color: rgb(164, 164, 164);
+	color: rgb(93, 93, 93);
 	text-align: center;
-	font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif ;
 }
 .jatekkep{
 	width: 100%;
@@ -36,8 +37,8 @@ main{
 	padding: 3px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	
-	border: 1px solid rgb(121, 121, 121);
+	background-color: rgb(34, 34, 34);
+	border: 1px solid rgb(128, 127, 127);
 }
 header{
 	grid-area: he;
@@ -47,10 +48,19 @@ nav ul{
 	grid-template-columns: 1fr 1fr 1fr;
 	width: 30%;
 	padding: 10px;
-	font-size: 18px;
+	font-size: 1.1vw;
+	
 }
 nav ul li{
 	list-style-type: none;
+	text-align: center;
+}
+nav ul li a{
+	color: rgb(84, 232, 30);
+	
+}
+nav ul li a:hover{
+	color: rgb(19, 87, 97);
 }
 article{
 	grid-area: ar;
@@ -62,14 +72,14 @@ article{
 	;*/
 }
 article div h2{
-	font-size: 14px;
+	font-size: calc(1px + 0.75vw);
 	text-align: center;
 	padding: 5px;
 	color: rgb(7, 7, 7);
 	text-shadow: 1px 1px 1px rgb(70, 255, 70);
 }
 article div h3{
-	font-size: 14px;
+	font-size: calc(1px + 1vw);
 	text-align: center;
 	color: rgb(7, 7, 7);
 	text-shadow: 1px 1px 1px rgb(70, 255, 70);
@@ -81,12 +91,19 @@ article div h3{
 	color: rgb(48, 250, 30);
 	text-shadow: 1px 1px 1px rgb(0, 0, 0);
 }
+.kosarbtn:hover{
+	color: rgb(26, 106, 21);
+}
 aside{
 	grid-area: as;
 	background-color: rgb(136, 136, 136);
 	text-align: center;
 	margin: 10px;
 	border: 2px gray solid;
+	width: 90%;
+}
+aside h2{
+	font-size: calc(2px + 1vw);
 }
 a{
 	text-decoration: none;
@@ -94,12 +111,46 @@ a{
 footer{
 	text-align: center;
 	grid-area: fo;
+	color: rgb(72, 163, 27);
+	background-color: rgb(4, 34, 1);
 }
 
 
-
-@media only screen and (max-width: 1050px) {
+@media only screen and (max-width: 1600px) {
 	main{
+		width: 60%;
+		/*Grid area 2-esével*/
+		grid-template-areas: 
+		"he he he"
+		"ar ar ar"
+		"as as as"
+		"fo fo fo"
+		;
+	}
+	article{
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		padding-right: 10px;
+	}
+	aside{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	nav ul{
+		font-size: calc(3px + 1vw);
+	}
+	article div h2{
+		font-size: calc(1px + 1vw);
+	}
+	article div h3{
+		font-size: calc(1px + 1vw);
+	}
+  }
+
+
+@media only screen and (max-width: 1150px) {
+	main{
+		width: 80%;
 		/*Grid area 2-esével*/
 		grid-template-areas: 
 		"he he"
@@ -112,6 +163,121 @@ footer{
 		grid-template-columns: 1fr 1fr 1fr 1fr;
 		padding-right: 10px;
 	}
-	
+	aside{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	nav ul{
+		font-size: calc(5px + 1.3vw);
+		width: 40%;
+	}
+	article div h2{
+		font-size: calc(4px + 1vw);
+	}
+	article div h3{
+		font-size: calc(4px + 1vw);
+	}
+
+  }
+
+
+  @media only screen and (max-width: 900px) {
+	main{
+		width: 100%;
+		/*Grid area 2-esével*/
+		grid-template-areas: 
+		"he he"
+		"ar ar"
+		"as as"
+		"fo fo"
+		;
+	}
+	article{
+		grid-template-columns: 1fr 1fr 1fr;
+		padding-right: 10px;
+	}
+	aside{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	nav ul{
+		font-size: calc(5px + 1.3vw);
+		width: 50%;
+	}
+	article div h2{
+		font-size: calc(7px + 1vw);
+	}
+	article div h3{
+		font-size: calc(8px + 1vw);
+	}
+  }
+
+
+  @media only screen and (max-width: 700px) {
+	main{
+		width: 100%;
+		/*Grid area 2-esével*/
+		grid-template-areas: 
+		"he he"
+		"ar ar"
+		"as as"
+		"fo fo"
+		;
+	}
+	article{
+		grid-template-columns: 1fr 1fr;
+		padding: 15px;
+	}
+	aside{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	nav ul{
+		font-size: calc(10px + 1.3vw);
+		width: 100%;
+	}
+	article div h2{
+		font-size: calc(7px + 1vw);
+	}
+	article div h3{
+		font-size: calc(8px + 1vw);
+	}
+
+  }
+
+
+  @media only screen and (max-width: 400px) {
+	main{
+		width: 100%;
+		/*Grid area 2-esével*/
+		grid-template-areas: 
+		"he he"
+		"ar ar"
+		"as as"
+		"fo fo"
+		;
+	}
+	article{
+		grid-template-columns: 1fr;
+		padding: 10px 60px 10px 60px;
+	}
+	aside{
+		width: 100%;
+		margin: 0;
+		margin-bottom: 10px;
+	}
+	nav ul{
+		font-size: calc(12px + 1.3vw);
+		width: 100%;
+	}
+	article div h2{
+		font-size: calc(11px + 1vw);
+	}
+	article div h3{
+		font-size: calc(13px + 1vw);
+	}
 
   }
